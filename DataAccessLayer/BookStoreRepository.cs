@@ -20,5 +20,13 @@ namespace DataAccessLayer
                             select Books).ToList();
             return BookList;
         }
+        public Books GetBookById(int id)
+        {
+            Books book = null;
+            book = (from Book in context.Books
+                            where Book.BookId==id
+                            select Book).FirstOrDefault();
+            return book;
+        }
     }
 }

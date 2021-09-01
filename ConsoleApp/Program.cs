@@ -16,13 +16,11 @@ namespace ConsoleApp
                 Console.WriteLine(book.Title);
             }
 
-            //For- GetAllBooks() method
+            Console.WriteLine("---------------------------------------------------------");
+            //For- GetBookById() method
             int id = 1;
-            var b = repository.GetBook();
-            foreach (var book in b)
-            {
-                Console.WriteLine(book.Title);
-            }
+            var b = repository.GetBookById(id);
+            Console.WriteLine(b.Title);
         }
     }
 }
